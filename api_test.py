@@ -6,8 +6,8 @@ from typing import Generator
 
 @pytest.fixture(scope="session")
 def api_request_context(playwright: Playwright) -> APIRequestContext:
-    #url = "http://localhost:5000/"
-    url = "http://35.178.210.218/"
+    url = "http://localhost:5555/"
+    #url = "http://35.178.210.218/"
     request_context = playwright.request.new_context(base_url=url)
 
     yield request_context
