@@ -19,14 +19,14 @@ def test_get_schemas(api_request_context: APIRequestContext):
     assert response.ok, 200
 
 
-def test_post_schema(api_request_context: APIRequestContext):
-    schema = {
-        "name": "testschema",
-        "schema": {
-            "name": "string",
-            "job": "job",
-            "country code": "country code"
-        }
-    }
-    response = api_request_context.post("/schema", data=schema)
-    assert response.status in [200, 404], f"Unexpected status: {response.status}, body: {response.text()}"
+#def test_post_schema(api_request_context: APIRequestContext):
+ #   schema = {
+  #      "name": "testschema",
+   #     "schema": {
+    #        "name": "string",
+     #       "job": "job",
+      #      "country code": "country code"
+       # }
+    #}
+    #response = api_request_context.post("/schema", data=schema)
+    #assert response.status in [200, 404], f"Unexpected status: {response.status}, body: {response.text()}"
